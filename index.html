@@ -1,0 +1,332 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sabrina's Shop 🌻</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px 15px;
+
+            background:
+                radial-gradient(circle at 20% 10%, #fffde0, transparent 30%),
+                radial-gradient(circle at 80% 90%, #fff3a3, transparent 30%),
+                linear-gradient(135deg, #fff9c4, #ffd83d);
+
+            overflow-x: hidden;
+        }
+
+        /* GIRASSÓIS */
+
+        .sunflower {
+            position: fixed;
+            font-size: 65px;
+            opacity: 0.45;
+            pointer-events: none;
+
+            animation: flutuar 4s ease-in-out infinite;
+        }
+
+        .one {
+            top: 5%;
+            left: 5%;
+        }
+
+        .two {
+            bottom: 5%;
+            right: 5%;
+            animation-delay: 1s;
+        }
+
+        .three {
+            top: 45%;
+            right: 3%;
+            font-size: 45px;
+            animation-delay: 2s;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+
+            animation: aparecer 0.8s ease;
+        }
+
+        /* LOGO */
+
+        .profile {
+            width: 125px;
+            height: 125px;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #ffd83d;
+
+            border: 6px solid white;
+
+            box-shadow:
+                0 8px 25px rgba(120, 90, 0, 0.20);
+
+            animation: pulsar 3s ease-in-out infinite;
+        }
+
+        .profile span {
+            font-size: 65px;
+        }
+
+        /* NOME */
+
+        h1 {
+            font-size: 34px;
+            font-weight: 900;
+
+            color: #332600;
+
+            margin-bottom: 7px;
+
+            text-shadow:
+                2px 2px 0 rgba(255,255,255,0.7);
+        }
+
+        .description {
+            font-size: 15px;
+            color: #6b5600;
+
+            margin-bottom: 28px;
+        }
+
+        /* BOTÕES */
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link {
+            width: 100%;
+
+            min-height: 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 17px 20px;
+
+            text-decoration: none;
+
+            color: #332600;
+
+            background: rgba(255,255,255,0.93);
+
+            border: 2px solid rgba(255,255,255,0.9);
+
+            border-radius: 18px;
+
+            font-size: 17px;
+            font-weight: 800;
+
+            box-shadow:
+                0 8px 20px rgba(100,75,0,0.12);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .link:hover {
+            transform: translateY(-4px) scale(1.02);
+
+            background: #fff;
+
+            box-shadow:
+                0 13px 28px rgba(100,75,0,0.18);
+        }
+
+        .link:active {
+            transform: scale(0.97);
+        }
+
+        /* DISCORD */
+
+        .discord {
+            background: #ffe05c;
+            border-color: #ffd83d;
+        }
+
+        /* TIKTOK */
+
+        .tiktok {
+            background: white;
+        }
+
+        .icon {
+            font-size: 23px;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            margin-top: 28px;
+
+            color: #6b5600;
+
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #4a3900;
+        }
+
+        /* ANIMAÇÕES */
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes flutuar {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+
+        @keyframes pulsar {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 500px) {
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .profile {
+                width: 110px;
+                height: 110px;
+            }
+
+            .profile span {
+                font-size: 55px;
+            }
+
+            .sunflower {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- GIRASSÓIS DECORATIVOS -->
+
+    <div class="sunflower one">🌻</div>
+    <div class="sunflower two">🌻</div>
+    <div class="sunflower three">🌻</div>
+
+
+    <main class="container">
+
+        <!-- LOGO -->
+
+        <div class="profile">
+            <span>🌻</span>
+        </div>
+
+
+        <!-- NOME -->
+
+        <h1>Sabrina's Shop 🌻</h1>
+
+        <p class="description">
+            ✨ Bem-vindo(a) à nossa lojinha! ✨
+        </p>
+
+
+        <!-- LINKS -->
+
+        <div class="links">
+
+            <a
+                class="link discord"
+                href="https://discord.gg/PM4zkzZPp"
+                target="_blank"
+            >
+                <span class="icon">💬</span>
+                <span>Discord</span>
+            </a>
+
+
+            <a
+                class="link tiktok"
+                href="https://www.tiktok.com/@sabrinashops_"
+                target="_blank"
+            >
+                <span class="icon">🎵</span>
+                <span>TikTok</span>
+            </a>
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+
+        <footer>
+            <strong>Sabrina's Shop 🌻</strong><br>
+            Feito com carinho 💛
+        </footer>
+
+    </main>
+
+</body>
+</html>
+```
